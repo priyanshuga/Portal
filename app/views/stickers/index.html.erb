@@ -1,0 +1,44 @@
+   <% if !flash[:notice].blank? %>   
+   <div class = "alert alert-info">   
+      <%= flash[:notice] %>   
+   </div>   
+   <% end %>   
+
+<br>   
+<% if current_user && current_user.admin %>
+   <%= link_to "New Sticker", new_sticker_path, class: "btn btn-primary" %>  
+<% end %>
+<br>   
+<br>   
+
+<table table class = "table table-bordered table-striped">   
+   <thead class="thead-dark">   
+      <tr>   
+         <th>Categories</th>   
+         <th>Stickers</th>   
+      </tr>   
+   </thead>   
+      
+   <tbody>    
+         <tr>   
+            <td>Diwali</td>   
+            <td>
+            <% @sticker.each do |s| %>
+               <% if s.category == "Diwali"%>
+               <%= link_to image_tag(s.image_url,:size => "300x200"), edit_sticker_path(s) %>
+            <% end %><% end %>
+            </td>   
+         </tr>
+         <tr>   
+            <td>Birthday</td>   
+            <td>
+            <% @sticker.each do |s| %>
+               <% if s.category == "Birthday"%>
+               <%= link_to image_tag(s.image_url,:size => "300x200"), edit_sticker_path(s) %>
+            <% end %><% end %>
+            </td>
+         </tr>
+            
+   </tbody>   
+      
+</table>   

@@ -1,0 +1,7 @@
+<div class="container well" style="margin-top: 40px;">
+<%= image_tag(@sticker.image_url,:size => "300x200")%>
+<br /><br />
+<p>Are you sure you want to delete? This action is irreversible!</p>
+<%= link_to "Delete", @sticker, method: :delete, class: "btn btn-danger"%>
+
+</div>
