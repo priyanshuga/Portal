@@ -12,25 +12,25 @@
 <br>   
 
 <table table class = "table table-bordered table-striped">   
-   <thead class="thead-dark">   
+   <thead class = "thead-dark">   
       <tr>   
-         <th>Categories</th>   
-         <th>Stickers</th>   
+         <th class = "text-center">Categories</th>   
+         <th class = "text-center">Stickers</th>   
       </tr>   
    </thead>   
       
    <tbody>    
          <tr>   
-            <td>Diwali</td>   
+            <td class = "text-center">Festivals</td>   
             <td>
             <% @sticker.each do |s| %>
-               <% if s.category == "Diwali"%>
+               <% if s.category == "Festival"%>
                <%= link_to image_tag(s.image_url,:size => "300x200"), edit_sticker_path(s) %>
             <% end %><% end %>
             </td>   
          </tr>
          <tr>   
-            <td>Birthday</td>   
+            <td class = "text-center">Birthday</td>   
             <td>
             <% @sticker.each do |s| %>
                <% if s.category == "Birthday"%>
