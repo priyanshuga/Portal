@@ -18,7 +18,7 @@
 <div class = "well">   
    <%= form_for @sticker do |f| %>   
       <%= f.label :category %>   
-      <%= f.select(:category, options_for_select([['Festival','Festival'], ['Birthday','Birthday']])) %>   
+      <%= f.select(:category, options_for_select([['Festival','Festival'], ['Birthday','Birthday'], ['Sports','Sports'],['Series','Series'],['Movies','Movies'],['Mood','Mood'],['Miscellaneous','Miscellaneous'],])) %>   
       <br><br>   
       <%= f.label :image %>   
       <%= f.file_field :image %>   

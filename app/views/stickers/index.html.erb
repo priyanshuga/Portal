@@ -38,6 +38,51 @@
             <% end %><% end %>
             </td>
          </tr>
+         <tr>   
+            <td class = "text-center">Sports</td>   
+            <td>
+            <% @sticker.each do |s| %>
+               <% if s.category == "Sports"%>
+               <%= link_to image_tag(s.image_url,:size => "300x200"), edit_sticker_path(s) %>
+            <% end %><% end %>
+            </td>
+         </tr>
+         <tr>   
+            <td class = "text-center">Series</td>   
+            <td>
+            <% @sticker.each do |s| %>
+               <% if s.category == "Series"%>
+               <%= link_to image_tag(s.image_url,:size => "300x200"), edit_sticker_path(s) %>
+            <% end %><% end %>
+            </td>
+         </tr>
+         <tr>   
+            <td class = "text-center">Movies</td>   
+            <td>
+            <% @sticker.each do |s| %>
+               <% if s.category == "Movies"%>
+               <%= link_to image_tag(s.image_url,:size => "300x200"), edit_sticker_path(s) %>
+            <% end %><% end %>
+            </td>
+         </tr>
+         <tr>   
+            <td class = "text-center">Mood</td>   
+            <td>
+            <% @sticker.each do |s| %>
+               <% if s.category == "Mood"%>
+               <%= link_to image_tag(s.image_url,:size => "300x200"), edit_sticker_path(s) %>
+            <% end %><% end %>
+            </td>
+         </tr>
+         <tr>   
+            <td class = "text-center">Miscellaneous</td>   
+            <td>
+            <% @sticker.each do |s| %>
+               <% if s.category == "Miscellaneous"%>
+               <%= link_to image_tag(s.image_url,:size => "300x200"), edit_sticker_path(s) %>
+            <% end %><% end %>
+            </td>
+         </tr>
             
    </tbody>   
       
